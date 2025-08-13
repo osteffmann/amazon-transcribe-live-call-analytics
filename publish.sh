@@ -156,9 +156,9 @@ haschanged() {
       previous_checksum=""
   fi
   if [ "$current_checksum" != "$previous_checksum" ]; then
-      return 1  # True, the directory has changed
+      return 0  # True, the directory has changed
   else
-      return 1  # False, the directory has not changed
+      return 0  # False, the directory has not changed
   fi
 }
 update_checksum() {
@@ -189,7 +189,7 @@ hassubmodulechanged() {
     if [ "$current_hash" != "$previous_hash" ]; then
         return 0  # True, the submodule has changed
     else
-        return 1  # False, the submodule has not changed
+        return 0  # False, the submodule has not changed
     fi
 }
 update_submodule_hash() {
