@@ -156,7 +156,7 @@ haschanged() {
       previous_checksum=""
   fi
   if [ "$current_checksum" != "$previous_checksum" ]; then
-      return 0  # True, the directory has changed
+      return 1  # True, the directory has changed
   else
       return 1  # False, the directory has not changed
   fi
