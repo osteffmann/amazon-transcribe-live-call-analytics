@@ -198,7 +198,7 @@ mv ${tmpdir}/${layer_dir}/dependencies_lambda_layer.zip ${layer_dir}/
 # Ensure all dependencies are properly installed
 echo "Verifying dependencies..."
 cd ${python_dir}
-python -c "import boto3; import jsonschema; import cfnresponse; import sagemaker; print('Dependencies verified successfully')"
+python3 -c "import boto3; import jsonschema; import cfnresponse; import sagemaker; print('Dependencies verified successfully')"
 cd -
 
 echo "Preparing Lambda function without dependencies"
